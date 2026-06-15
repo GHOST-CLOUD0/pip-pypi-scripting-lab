@@ -6,7 +6,7 @@ def generate_log(entries):
     if not isinstance(entries, list):
         raise ValueError("Input must be list")
 
-    filename = f"log_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.txt"
+    filename = f"log_{datetime.now().strftime('%Y%m%d')}.txt"
 
     with open(filename, "w") as file:
         for entry in entries:
